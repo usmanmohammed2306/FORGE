@@ -1,5 +1,7 @@
 # FORGE
 
+[![CPU checks](https://github.com/usmanmohammed2306/FORGE/actions/workflows/ci.yml/badge.svg)](https://github.com/usmanmohammed2306/FORGE/actions/workflows/ci.yml)
+
 ### Reproducible AI systems experiments
 
 > Don't memorize AI optimizations. Measure when they work.

@@ -8,11 +8,13 @@ Plan lock: the complete sixty-slice evidence-gated plan is the only active plan.
 
 Publication decision, October 20: the owner authorized a public repository under `usmanmohammed2306/FORGE` and direct publication to `main`. This publishes the current implementation and roadmap; it does not assert completion of the frozen V1 product. The independent learning track continues separately. Test and measurement dates below remain the dates on which they were actually observed.
 
+Publication verified: [public repository](https://github.com/usmanmohammed2306/FORGE), branch `main`, initial commit `e1e4750a96e4511ca05c6e9898faaedc7dd7bd99`. The remote SHA and 69-file tree matched the reviewed baseline. [Hosted CPU checks passed](https://github.com/usmanmohammed2306/FORGE/actions/runs/39466548399) for that commit on October 20. Private guidance, career records, and runtime artifacts were excluded.
+
 ## Current milestone
 
 - Stage: 1 - Make one measured run real
 - Active slice: `S01 - Project pulse`
-- Slice state: `ACTIVE` - local implementation exists; student teach-back, GitHub PR, and CI run remain
+- Slice state: `ACTIVE` - public bootstrap and CPU CI exist; independent student variation, teach-back, and focused learning PR remain
 - Stage 1 gate: `OPEN` - complete the isolated L0 verifier and clean-checkout reproduction; the tiny CPU model is implemented
 
 ## Current implementation evidence
