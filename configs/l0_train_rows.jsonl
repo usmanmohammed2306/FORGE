@@ -1,0 +1,5 @@
+{"id":"t1","prompt":"Write a function clamp(x, lo, hi) that bounds x to the interval","completion":"def clamp(x, lo, hi): return min(max(x, lo), hi)","source":"forge/synthetic","revision":"fixture-v1","source_group":"clamp"}
+{"id":"t2","prompt":"Write a function triangle_area(base, height) using the standard area formula","completion":"def triangle_area(base, height): return base * height / 2","source":"forge/synthetic","revision":"fixture-v1","source_group":"triangle"}
+{"id":"t3","prompt":"Write a function clamp(x, lo, hi) that bounds x to the interval","completion":"def clamp(x, lo, hi): return min(max(x, lo), hi)","source":"forge/synthetic","revision":"fixture-v1","source_group":"clamp-copy"}
+{"id":"t4","prompt":"Write a function add(a, b) that returns their sum","completion":"def add(a, b): return a + b","source":"forge/synthetic","revision":"fixture-v1","source_group":"add"}
+

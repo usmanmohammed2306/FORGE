@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "name": "two-task-verifier-smoke",
+  "seed": 11,
+  "bootstrap_repeats": 1000,
+  "entries": [
+    {
+      "task": "l0_factorial_task.json",
+      "baseline": "l0_return_one.py",
+      "candidate": "l0_factorial_solution.py"
+    },
+    {
+      "task": "l0_triangular_task.json",
+      "baseline": "l0_return_one.py",
+      "candidate": "l0_triangular_solution.py"
+    }
+  ]
+}

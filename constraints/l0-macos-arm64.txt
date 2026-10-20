@@ -1,0 +1,12 @@
+# Optional local L0 training environment observed on macOS arm64, Python 3.12.
+# CUDA and HPU installs require separate hardware-specific locks.
+filelock==4.0.8
+fsspec==2026.9.0
+Jinja2==3.1.6
+MarkupSafe==3.0.3
+mpmath==1.3.0
+networkx==3.7
+numpy==2.5.3
+setuptools==84.0.0
+sympy==1.14.0
+torch==2.14.1

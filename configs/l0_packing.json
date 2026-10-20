@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "l0-packing-smoke",
+  "model": {
+    "id": "forge/l0-fixture",
+    "revision": "fixture-v1",
+    "level": "L0"
+  },
+  "dataset": {
+    "id": "forge/synthetic-lengths",
+    "revision": "fixture-v1"
+  },
+  "hardware": {
+    "backend": "cpu",
+    "world_size": 1
+  },
+  "workload": {
+    "kind": "packing",
+    "sequence_lengths": [64, 150, 80, 220, 90, 240, 110, 200, 72, 180, 130, 230],
+    "batch_size": 4,
+    "max_sequence_length": 256
+  },
+  "seed": 0
+}

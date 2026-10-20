@@ -1,0 +1,30 @@
+name: CPU checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  cpu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install project
+        run: python -m pip install -c constraints/dev.txt -e '.[dev]'
+      - name: Format
+        run: ruff format --check forge tests
+      - name: Lint
+        run: ruff check forge tests
+      - name: Tests
+        run: pytest -q
+      - name: CLI smoke
+        run: |
+          forge version
+          forge experiment validate configs/l0_packing.json
+          forge run configs/l0_packing.json
+          forge runs audit
+          forge verifier score configs/l0_factorial_task.json configs/l0_factorial_solution.py
+          forge verifier compare configs/l0_comparison.json

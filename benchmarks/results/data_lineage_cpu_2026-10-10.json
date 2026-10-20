@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "kind": "local_synthetic_cpu_microbenchmark",
+  "date": "2026-10-10",
+  "command_template": ".venv/bin/python benchmarks/data_lineage_cpu.py --rows 6000 --repeats 5 --distribution DISTRIBUTION",
+  "system": "Darwin",
+  "machine": "arm64",
+  "python": "3.12.14",
+  "measurement": "One warmup pair, then five measured pairs with alternating method order; end-to-end build_dataset calls including JSONL parsing and artifact writes.",
+  "source_refs": {
+    "pairwise": "sha256:43b7f994beaaaaa8cd16e790146fc42b783ec8ecd9765370dcb3fe8c88e4769a",
+    "indexed": "sha256:29b74e8afa438d923e27c316a1ca866faebb8bde889472eaf87f426f607c1c86"
+  },
+  "cases": [
+    {
+      "distribution": "disjoint",
+      "raw_rows": 6000,
+      "kept_rows": 5401,
+      "removed_rows": 599,
+      "clean_data_ref": "sha256:3d818bf41135269365892981dbfb696e8292b0c703211b4a33008a66fdccf455",
+      "pairwise_elapsed_ms": [2287.640125, 2213.744917, 2175.656959, 2266.336208, 2342.415375],
+      "indexed_elapsed_ms": [40.160792, 41.884584, 40.402417, 43.164917, 46.172584],
+      "pairwise_median_ms": 2266.336208,
+      "indexed_median_ms": 41.884584,
+      "median_paired_speedup": 52.85345360001666
+    },
+    {
+      "distribution": "shared_shingle",
+      "raw_rows": 6000,
+      "kept_rows": 5401,
+      "removed_rows": 599,
+      "clean_data_ref": "sha256:166d9ea85980e73b2f9cb8eb4861d2db45870522b7b53f73efcb3ef11b1a2891",
+      "pairwise_elapsed_ms": [3827.8725, 3653.93225, 4119.930792, 4003.605167, 4208.037292],
+      "indexed_elapsed_ms": [3555.326167, 3286.988583, 4473.398834, 3925.324875, 3669.722083],
+      "pairwise_median_ms": 4003.605167,
+      "indexed_median_ms": 3669.722083,
+      "median_paired_speedup": 1.0766586018266717,
+      "negative_pair_count": 1
+    },
+    {
+      "distribution": "duplicate_heavy",
+      "raw_rows": 6000,
+      "kept_rows": 600,
+      "removed_rows": 5400,
+      "clean_data_ref": "sha256:a4b8952afdf9f8b2edd7fc5c7737aac900ff3704de43577e2505cc7666933add",
+      "pairwise_elapsed_ms": [103.870041, 108.705625, 129.669042, 107.479792, 107.248833],
+      "indexed_elapsed_ms": [22.467958, 22.31275, 22.234, 23.659792, 22.126417],
+      "pairwise_median_ms": 107.479792,
+      "indexed_median_ms": 22.31275,
+      "median_paired_speedup": 4.8470944482335305
+    }
+  ],
+  "verification": "Within each paired run, raw, kept, removed, removal reasons and clean-data digests matched exactly; three additional threshold-parameterized reference-equivalence tests passed in the 77-test suite.",
+  "claim_limit": "Synthetic CPU fixture only; the cases are not a representative SFT corpus, the sample is five timing pairs without a confidence interval, memory overhead was not measured, and no A100 or Gaudi training speedup follows."
+}

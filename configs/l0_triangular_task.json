@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task_id": "triangular-repair-l0",
+  "public_cases": [
+    {"x": 0, "expected": 0},
+    {"x": 1, "expected": 1},
+    {"x": 3, "expected": 6}
+  ],
+  "heldout_cases": [
+    {"x": 5, "expected": 15},
+    {"x": 6, "expected": 21}
+  ],
+  "step_limit": 500
+}

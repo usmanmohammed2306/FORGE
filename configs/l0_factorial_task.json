@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task_id": "factorial-repair-l0",
+  "public_cases": [
+    {"x": 0, "expected": 1},
+    {"x": 1, "expected": 1},
+    {"x": 3, "expected": 6}
+  ],
+  "heldout_cases": [
+    {"x": 5, "expected": 120},
+    {"x": 6, "expected": 720}
+  ],
+  "step_limit": 500
+}

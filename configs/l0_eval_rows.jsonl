@@ -1,0 +1,2 @@
+{"id":"e1","prompt":"Write a function add(a, b) that returns their sum","completion":"def add(a, b): return a + b","source":"forge/synthetic","revision":"fixture-v1","source_group":"add"}
+
